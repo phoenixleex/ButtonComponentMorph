@@ -13,6 +13,12 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/content.css" />
 		<script src="js/modernizr.custom.js"></script>
+
+		<script type="text/javascript">
+			function submit(form_name) {
+				document.getElementById(form_name).submit();
+			}
+		</script>
 	</head>
 	<body>
 		<div class="container">
@@ -31,11 +37,12 @@
 								<div class="content-style-form content-style-form-1">
 									<span class="icon icon-close" STYLE="font-size: 30pt">x</span>
 									<h2>Login</h2>
-									<form>
+									<form id="log_in_form" action="authenticate.jsp" method="POST">
 										<p><label>Email</label><input type="text" /></p>
 										<p><label>Password</label><input type="password" /></p>
-										<p><button>Login</button></p>
+										<p><button onclick="submit('log_in_form')">Login</button></p>
 									</form>
+									
 								</div>
 							</div>
 						</div>
@@ -48,11 +55,11 @@
 								<div class="content-style-form content-style-form-2">
 									<span class="icon icon-close" STYLE="font-size: 30pt">x</span>
 									<h2>Sign Up</h2>
-									<form>
+									<form id="sign_up_form" action="signupprocess.jsp" method="POST">
 										<p><label>Email</label><input type="text" /></p>
 										<p><label>Password</label><input type="password" /></p>
 										<p><label>Repeat Password</label><input type="password" /></p>
-										<p><button>Sign Up</button></p>
+										<p><button onclick="submit('sign_up_form')">Sign Up</button></p>
 									</form>
 								</div>
 							</div>
