@@ -12,7 +12,8 @@
 
 .icon-close {
 	z-index: 100;
-	font-size: 100px;
+	width: 1em;
+	height: 1em;
 	cursor: pointer;
 }
 
